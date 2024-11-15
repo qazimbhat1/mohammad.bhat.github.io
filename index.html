@@ -3,48 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Mohammad Qazim Bhat | Interactive Resume</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>This is a basic personal website hosted on GitHub Pages.</p>
-    </header>
-
+    <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research Experience</a></li>
+            <li><a href="#industry">Industry Experience</a></li>
+            <li><a href="#skills">Technical Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm [Your Name]. I am passionate about web development and love to create beautiful and functional websites.</p>
+    <!-- Hero Section -->
+    <header id="home" class="hero-section">
+        <h1>Mohammad Qazim Bhat</h1>
+        <p>Graduate Student | Researcher | Engineer</p>
+        <a href="#contact" class="button">Contact Me</a>
+    </header>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <p><strong>University of Colorado Boulder</strong><br>MS in Computer Science, Expected Graduation: May 2026</p>
+        <p><strong>Ramaiah Institute of Technology</strong><br>B.E. in Computer Science</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul id="project-list"></ul>
+    <!-- Research Experience Section -->
+    <section id="research" class="section">
+        <h2>Research Experience</h2>
+        <div class="research-item">
+            <h3>NeurIPS'24, IJCV'24, IJCAI-ECAI'22</h3>
+            <p>Developed methods in Computer Vision, foundation models, and Multi-Modal LLMs.</p>
+        </div>
+        <div class="research-item">
+            <h3>University of Colorado Boulder (Correll Lab)</h3>
+            <p>Worked on vision-language models for robotic manipulation.</p>
+        </div>
+        <div class="research-item">
+            <h3>MBZUAI</h3>
+            <p>Projects included MLLM-360, Web2Code, and Fast OD.</p>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
+    <!-- Industry Experience Section -->
+    <section id="industry" class="section">
+        <h2>Industry Experience</h2>
+        <div class="industry-item">
+            <h3>ITC Limited - Data Science Intern</h3>
+            <p>Focused on time series sales forecasting and data analysis.</p>
+        </div>
+        <div class="industry-item">
+            <h3>Samsung R&D Institute - ML Intern</h3>
+            <p>Worked on hand-written text manipulation using ScrabbleGAN and LSTM.</p>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="section">
+        <h2>Technical Skills</h2>
+        <p>Frameworks: PyTorch, TensorFlow, OpenCV, DARPA’s D3M</p>
+        <p>Expertise: Computer Vision, AutoML, Outlier Detection, Vision-Language Models, Knowledge Distillation, LLMs</p>
+        <p>Programming: Python, C/C++, HTML, CSS, Swift</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
         <form id="contact-form">
             <input type="text" id="name" placeholder="Your Name" required>
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
+        <p id="status-message"></p>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 My Personal Website</p>
+        <p>&copy; 2024 Mohammad Qazim Bhat. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
