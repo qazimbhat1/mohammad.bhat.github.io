@@ -3,89 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Qazim Bhat | Interactive Resume</title>
+    <title>Modern Interactive Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- Navigation Bar -->
     <nav>
+        <div class="logo">MyBrand</div>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#research">Research Experience</a></li>
-            <li><a href="#industry">Industry Experience</a></li>
-            <li><a href="#skills">Technical Skills</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-section">
-        <h1>Mohammad Qazim Bhat</h1>
-        <p>Graduate Student | Researcher | Engineer</p>
-        <a href="#contact" class="button">Contact Me</a>
-    </header>
-
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <h2>Education</h2>
-        <p><strong>University of Colorado Boulder</strong><br>MS in Computer Science, Expected Graduation: May 2026</p>
-        <p><strong>Ramaiah Institute of Technology</strong><br>B.E. in Computer Science</p>
-    </section>
-
-    <!-- Research Experience Section -->
-    <section id="research" class="section">
-        <h2>Research Experience</h2>
-        <div class="research-item">
-            <h3>NeurIPS'24, IJCV'24, IJCAI-ECAI'22</h3>
-            <p>Developed methods in Computer Vision, foundation models, and Multi-Modal LLMs.</p>
-        </div>
-        <div class="research-item">
-            <h3>University of Colorado Boulder (Correll Lab)</h3>
-            <p>Worked on vision-language models for robotic manipulation.</p>
-        </div>
-        <div class="research-item">
-            <h3>MBZUAI</h3>
-            <p>Projects included MLLM-360, Web2Code, and Fast OD.</p>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to MyBrand</h1>
+            <p>Your go-to solution for web design and development</p>
+            <a href="#portfolio" class="hero-button">Explore Portfolio</a>
         </div>
     </section>
 
-    <!-- Industry Experience Section -->
-    <section id="industry" class="section">
-        <h2>Industry Experience</h2>
-        <div class="industry-item">
-            <h3>ITC Limited - Data Science Intern</h3>
-            <p>Focused on time series sales forecasting and data analysis.</p>
-        </div>
-        <div class="industry-item">
-            <h3>Samsung R&D Institute - ML Intern</h3>
-            <p>Worked on hand-written text manipulation using ScrabbleGAN and LSTM.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>We are a passionate team dedicated to building beautiful, modern websites that deliver seamless user experiences.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>Crafting visually stunning and user-friendly designs.</p>
+            </div>
+            <div class="card">
+                <h3>Development</h3>
+                <p>Building responsive and efficient websites using modern technologies.</p>
+            </div>
+            <div class="card">
+                <h3>SEO Optimization</h3>
+                <p>Enhancing online visibility and improving search rankings.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Technical Skills Section -->
-    <section id="skills" class="section">
-        <h2>Technical Skills</h2>
-        <p>Frameworks: PyTorch, TensorFlow, OpenCV, DARPA’s D3M</p>
-        <p>Expertise: Computer Vision, AutoML, Outlier Detection, Vision-Language Models, Knowledge Distillation, LLMs</p>
-        <p>Programming: Python, C/C++, HTML, CSS, Swift</p>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>Our Work</h2>
+        <div class="portfolio-gallery">
+            <!-- Add multiple items with images -->
+            <div class="portfolio-item">
+                <img src="portfolio1.jpg" alt="Project 1">
+                <div class="portfolio-overlay">
+                    <h3>Project 1</h3>
+                    <p>A beautiful website design project.</p>
+                </div>
+            </div>
+            <!-- Repeat similar items for more projects -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-item">
+                <p>"Outstanding service and amazing results!"</p>
+                <h4>- Client Name</h4>
+            </div>
+            <!-- Repeat similar items for more testimonials -->
+        </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
         <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
-        <p id="status-message"></p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mohammad Qazim Bhat. All rights reserved.</p>
+        <p>&copy; 2024 MyBrand. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
