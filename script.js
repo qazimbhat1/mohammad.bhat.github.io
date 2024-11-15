@@ -1,23 +1,27 @@
-// Example JavaScript code to dynamically add projects
-document.addEventListener('DOMContentLoaded', () => {
-    const projects = [
-        { name: 'Project 1', description: 'A brief description of project 1.' },
-        { name: 'Project 2', description: 'A brief description of project 2.' },
-        { name: 'Project 3', description: 'A brief description of project 3.' }
-    ];
-
-    const projectList = document.getElementById('project-list');
-
-    projects.forEach(project => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<strong>${project.name}</strong>: ${project.description}`;
-        projectList.appendChild(listItem);
+// Smooth Scroll
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-// Basic form submission handler
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent form from submitting the traditional way
-    alert('Thank you for your message!');
-});
+// Form Submission with Validation
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const statusMessage = document.getElementById('status-message');
 
+    if (name && email && message) {
+        statusMessage.textContent = 'Thank you for your message!';
+        statusMessage.style.color = 'green';
+        this.reset();
+    } else {
+        statusMessage.textContent = 'Please fill out all fields.';
+        statusMessage.style.color = 'red';
+    }
+});
