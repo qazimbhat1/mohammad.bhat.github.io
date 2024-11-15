@@ -1,4 +1,4 @@
-// Smooth Scroll
+// Smooth Scroll for Navigation Links
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -8,20 +8,25 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
-// Form Submission with Validation
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const statusMessage = document.getElementById('status-message');
+// Carousel for Testimonials
+const carousel = document.querySelector('.testimonial-carousel');
+let isDown = false;
+let startX;
+let scrollLeft;
 
-    if (name && email && message) {
-        statusMessage.textContent = 'Thank you for your message!';
-        statusMessage.style.color = 'green';
-        this.reset();
-    } else {
-        statusMessage.textContent = 'Please fill out all fields.';
-        statusMessage.style.color = 'red';
-    }
+carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => isDown = false);
+carousel.addEventListener('mouseup', () => isDown = false);
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 3;
+    carousel.scrollLeft = scrollLeft - walk;
 });
